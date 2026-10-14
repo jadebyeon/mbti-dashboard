@@ -11,11 +11,11 @@ HERE = Path(__file__).parent
 
 st.set_page_config(page_title="MBTI in writing", layout="wide", initial_sidebar_state="collapsed")
 st.markdown("""<style>
-header, footer, #MainMenu, [data-testid="stToolbar"] {display:none !important}
-html, body, .stApp, [data-testid="stAppViewContainer"], section.main {overflow:hidden !important; background:#070708 !important}
-.block-container, [data-testid="stMainBlockContainer"] {padding:0 !important; max-width:100% !important}
+header, footer, #MainMenu, [data-testid="stToolbar"], [data-testid="stHeader"], [data-testid="stDecoration"], [data-testid="stStatusWidget"], [data-testid="stBottom"] {display:none !important}
+html, body, .stApp, [data-testid="stApp"], [data-testid="stAppViewContainer"], [data-testid="stMain"], section.main {height:100vh !important; max-height:100vh !important; overflow:hidden !important; background:#0b0b0c !important}
+.block-container, [data-testid="stMainBlockContainer"] {padding:0 !important; max-width:100% !important; min-height:0 !important}
 [data-testid="stVerticalBlock"] {gap:0 !important}
-iframe {height:100vh !important; border:0 !important}
+iframe {position:fixed !important; top:0; left:0; width:100vw !important; height:100vh !important; border:0 !important}
 </style>""", unsafe_allow_html=True)
 
 # Fixed notebook result (all 8,600 users): largest rank-biserial effect across the 6 measures
